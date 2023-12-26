@@ -1,15 +1,16 @@
-import yayJpg from '../assets/yay.jpg';
+import { Flex } from 'antd';
+import { useStyles } from './styles';
+import CounterfoilCanvas from './components/counterfoil-canvas';
 
 export default function HomePage() {
+  const styles = useStyles();
+
   return (
-    <div>
-      <h2>Yay! Welcome to umi!</h2>
-      <p>
-        <img src={yayJpg} width="388" />
-      </p>
-      <p>
-        To get started, edit <code>pages/index.tsx</code> and save to reload.
-      </p>
-    </div>
+    <Flex className={styles.homePage}>
+      <div className={styles.sidePanel}></div>
+      <div className={styles.content}>
+        <CounterfoilCanvas />
+      </div>
+    </Flex>
   );
 }

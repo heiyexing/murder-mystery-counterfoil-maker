@@ -10,6 +10,12 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "@antv/g": "^5.18.23",
+    "@antv/g-canvas": "^1.11.25",
+    "@antv/react-g": "^1.10.24",
+    "@emotion/css": "^11.11.2",
+    "ahooks": "^3.7.8",
+    "antd": "^5.12.5",
     "umi": "^4.0.90"
   },
   "devDependencies": {
