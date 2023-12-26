@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "author": "yanxiong <oujinhui.ojh@antgroup.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "umi": "^4.0.90"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@umijs/fabric": "^4.0.1",
+    "prettier": "^3.1.1",
+    "typescript": "^5.0.3"
+  }
+}
