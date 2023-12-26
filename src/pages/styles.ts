@@ -8,6 +8,7 @@ export const useStyles = () => {
   return {
     homePage: css`
       height: 100vh;
+      overflow: hidden;
     `,
     sidePanel: css`
       width: ${leftPanelWidth};
