@@ -7,4 +7,5 @@ export type PosterConfig = {
   username: string;
   time: string;
   roleImg: string;
+  mainColor: string;
 };

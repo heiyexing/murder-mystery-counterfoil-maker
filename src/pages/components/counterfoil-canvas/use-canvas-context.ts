@@ -24,8 +24,8 @@ export const useCanvasContext = () => {
 
   const offset = useMemo(() => {
     return {
-      x: (size.width - config.width) / 2,
-      y: (size.height - config.height) / 2,
+      x: 50,
+      y: 50,
     };
   }, [size, config.width, config.height]);
 

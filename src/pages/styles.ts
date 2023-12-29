@@ -13,6 +13,7 @@ export const useStyles = () => {
     sidePanel: css`
       width: ${leftPanelWidth};
       box-shadow: ${token.boxShadow};
+      position: relative;
     `,
     content: css`
       width: calc(100% - ${leftPanelWidth});

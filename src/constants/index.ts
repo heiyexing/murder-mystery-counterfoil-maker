@@ -9,6 +9,18 @@ export const DEFAULT_POSTER_CONFIG: PosterConfig = {
   username: '',
   time: '',
   roleImg: '',
+  mainColor: '#000',
 };
 
 export const TIME_FORMAT = 'YYYY-MM-DD';
+
+export const FONT_LIST = [
+  {
+    fontName: 'title-font',
+    fontUrl: '/murder-mystery-counterfoil-maker/font/title-font.ttf',
+  },
+  {
+    fontName: 'value-font',
+    fontUrl: '/murder-mystery-counterfoil-maker/font/value-font.ttf',
+  },
+];
