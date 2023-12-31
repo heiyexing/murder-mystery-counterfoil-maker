@@ -1,14 +1,13 @@
+import { PosterConfig } from '@/types';
 import { Rect, Image } from '@antv/react-g';
-import { useCanvasContext } from './use-canvas-context';
 
-const Background: React.FC = () => {
-  const { offset, config } = useCanvasContext();
+const Background: React.FC<{ config: PosterConfig }> = ({ config }) => {
   const { width, height, posterImg } = config;
 
   return (
     <>
-      <Rect width={width} height={height} {...offset} fill={'#fff'} />
-      <Image key={posterImg} img={posterImg} width={width} keepAspectRatio {...offset} />
+      <Rect width={width} height={height} fill={'#fff'} />
+      <Image key={posterImg} img={posterImg} width={width} keepAspectRatio />
     </>
   );
 };

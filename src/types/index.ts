@@ -9,3 +9,10 @@ export type PosterConfig = {
   roleImg: string;
   mainColor: string;
 };
+
+export type HistoryImage = {
+  id?: string;
+  name: string;
+  url: string;
+  date: string;
+}

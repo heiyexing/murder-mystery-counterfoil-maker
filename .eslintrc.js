@@ -13,6 +13,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'import/no-unresolved': 'warn',
     'import/order': 'warn',
+    'no-unused-vars': 'warn'
   },
   env: {
     node: true,

@@ -15,7 +15,7 @@ const ExportBtn: React.FC = () => {
     }
     setLoading(true);
     const clipCanvas = await exportor.toCanvas({
-      clippingRegion: new Rectangle(50, 50, config.width, config.height),
+      clippingRegion: new Rectangle(0, 0, config.width, config.height),
     });
     const dataURL = clipCanvas.toDataURL();
     exportor.downloadImage({
