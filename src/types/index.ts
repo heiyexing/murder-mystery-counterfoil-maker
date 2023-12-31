@@ -1,13 +1,25 @@
+export type PosterMarkColor = {
+  id: string;
+  color: string;
+  percent: number;
+};
+
+export type PosterMark = {
+  height: number;
+  colors: Array<PosterMarkColor>;
+};
+
 export type PosterConfig = {
   width: number;
   height: number;
-  posterImg: string;
+  posterImg?: string;
   title: string;
   role: string;
   username: string;
   time: string;
-  roleImg: string;
+  roleImg?: string;
   mainColor: string;
+  mask?: undefined | false | PosterMark;
 };
 
 export type HistoryImage = {
@@ -15,4 +27,4 @@ export type HistoryImage = {
   name: string;
   url: string;
   date: string;
-}
+};

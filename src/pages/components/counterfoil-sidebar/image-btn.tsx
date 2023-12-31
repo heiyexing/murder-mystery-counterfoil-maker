@@ -1,6 +1,6 @@
 import { getImageBase64 } from '@/utils';
 import { DeleteOutlined, InboxOutlined } from '@ant-design/icons';
-import { Alert, Button, Card, Checkbox, Col, Divider, Empty, Image, Modal, Row, Upload } from 'antd';
+import { Alert, Button, Card, Checkbox, Col, Divider, Empty, Image, Input, Modal, Row, Space, Upload } from 'antd';
 import type { DraggerProps } from 'antd/es/upload';
 import { useState } from 'react';
 import { useStyles } from './styles';
@@ -17,9 +17,10 @@ const { Dragger } = Upload;
 export type ImageBtnProps = {
   value?: string;
   onChange?: (value: string) => void;
+  tip?: React.ReactNode;
 };
 
-const ImageBtn: React.FC<ImageBtnProps> = ({ value, onChange }) => {
+const ImageBtn: React.FC<ImageBtnProps> = ({ value, onChange, tip }) => {
   const [selectImage, setSelectImage] = useState<string | undefined>(); // 选择的图片
   const [visible, setVisible] = useState(false);
   const styles = useStyles();
@@ -39,6 +40,7 @@ const ImageBtn: React.FC<ImageBtnProps> = ({ value, onChange }) => {
         },
       ];
     });
+    setSelectImage(base64);
   };
 
   const onOk = () => {
@@ -65,9 +67,10 @@ const ImageBtn: React.FC<ImageBtnProps> = ({ value, onChange }) => {
 
   return (
     <>
-      <Button style={value ? { marginBottom: 12 } : undefined} onClick={() => setVisible(true)}>
-        {value ? '重新选择' : '选择图片'}
-      </Button>
+      <div style={value ? { marginBottom: 8 } : undefined}>
+        <Button onClick={() => setVisible(true)}>{value ? '重新选择' : '选择图片'}</Button>
+        {tip && <div className={styles.uploadTip}>{tip}</div>}
+      </div>
       {value && <Image src={value} />}
 
       <Modal
@@ -96,7 +99,6 @@ const ImageBtn: React.FC<ImageBtnProps> = ({ value, onChange }) => {
           </p>
           <p className="ant-upload-text">点击或拖拽可批量上传图片</p>
         </Dragger>
-
         <Divider />
 
         <div className={styles.imageList}>

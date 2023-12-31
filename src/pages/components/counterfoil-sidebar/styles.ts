@@ -13,6 +13,12 @@ export const useStyles = () => {
       h5.ant-typography {
         margin: 8px 0;
       }
+      p.form-title {
+        color: ${token.colorTextDescription};
+      }
+      .ant-tabs-nav {
+        margin-bottom: 0;
+      }
     `,
     exportPanel: css`
       position: absolute;
@@ -26,6 +32,14 @@ export const useStyles = () => {
         color: ${token.colorTextDescription} !important;
         font-size: 14px !important;
       }
+      .ant-upload-drag-icon {
+        margin-bottom: 0px !important;
+      }
+    `,
+    uploadTip: css`
+      font-size: 12px;
+      color: ${token.colorTextDescription};
+      margin-top: 4px;
     `,
     imageList: css`
       max-height: 300px;
@@ -34,7 +48,7 @@ export const useStyles = () => {
         overflow: hidden;
         cursor: pointer;
         border-radius: 8px;
-        border: 1px solid #fff;
+        border: 2px solid #fff;
         margin-bottom: 12px;
         .image-checkbox {
           position: absolute;
@@ -69,5 +83,33 @@ export const useStyles = () => {
         color: ${token.colorTextDescription};
       }
     `,
+    gradationColorPicker: css`
+      margin-bottom: 32px;
+      .color-blank {
+        width: 100%;
+        height: 6px;
+        border-radius: 6px;
+        margin-top: 12px;
+      }
+      .color-item {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(-12px);
+        position: absolute;
+        &:hover {
+          z-index: 1;
+          .anticon-caret-up {
+            color: ${token.colorPrimary}
+          }
+        }
+      }
+      .ant-color-picker-trigger {
+        margin-top: -4px;
+      }
+      .anticon-caret-up {
+        color: ${token.colorBorder}
+      }
+    `
   };
 };

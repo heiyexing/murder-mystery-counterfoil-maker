@@ -24,3 +24,5 @@ export const FONT_LIST = [
     fontUrl: '/murder-mystery-counterfoil-maker/font/value-font.ttf',
   },
 ];
+
+export const MASK_EXPAND_HEIGHT = 50;
